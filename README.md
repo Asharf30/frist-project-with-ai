@@ -57,7 +57,7 @@ ESLint
 📂 Full Project Structure
 .
 ├── .github/
-│   ├── agents/
+│   ├── agents/                          # AI agent definitions
 │   │   ├── speckit.analyze.agent.md
 │   │   ├── speckit.checklist.agent.md
 │   │   ├── speckit.clarify.agent.md
@@ -72,7 +72,7 @@ ESLint
 │   │   ├── speckit.specify.agent.md
 │   │   ├── speckit.tasks.agent.md
 │   │   └── speckit.taskstoissues.agent.md
-│   ├── prompts/
+│   ├── prompts/                         # Prompt templates for each agent
 │   │   ├── speckit.analyze.prompt.md
 │   │   ├── speckit.checklist.prompt.md
 │   │   ├── speckit.clarify.prompt.md
@@ -93,7 +93,7 @@ ESLint
 │
 ├── .specify/
 │   ├── extensions/
-│   │   ├── git/
+│   │   ├── git/                         # Git extension
 │   │   │   ├── commands/
 │   │   │   │   ├── speckit.git.commit.md
 │   │   │   │   ├── speckit.git.feature.md
@@ -115,19 +115,16 @@ ESLint
 │   │   │   ├── extension.yml
 │   │   │   ├── git-config.yml
 │   │   │   └── README.md
-│   │   └── .registry
-│   │
-│   ├── integrations/
-│   │   ├── copilot/
-│   │   │   └── scripts/
-│   │   │       ├── update-context.ps1
-│   │   │       └── update-context.sh
-│   │   ├── copilot.manifest.json
-│   │   └── speckit.manifest.json
-│   │
+│   │   └── .registry/
+│   │       └── integrations/
+│   │           ├── copilot/
+│   │           │   └── scripts/
+│   │           │       ├── update-context.ps1
+│   │           │       └── update-context.sh
+│   │           ├── copilot.manifest.json
+│   │           └── speckit.manifest.json
 │   ├── memory/
-│   │   └── constitution.md
-│   │
+│   │   └── constitution.md              # Project constitution / AI memory
 │   ├── scripts/
 │   │   └── powershell/
 │   │       ├── check-prerequisites.ps1
@@ -136,15 +133,13 @@ ESLint
 │   │       ├── setup-plan.ps1
 │   │       ├── update-agent-context.ps1
 │   │       └── validate-feature-branch.ps1
-│   │
-│   ├── templates/
+│   ├── templates/                       # Document templates
 │   │   ├── agent-file-template.md
 │   │   ├── checklist-template.md
 │   │   ├── constitution-template.md
 │   │   ├── plan-template.md
 │   │   ├── spec-template.md
 │   │   └── tasks-template.md
-│   │
 │   ├── extensions.yml
 │   ├── feature.json
 │   ├── init-options.json
@@ -157,7 +152,7 @@ ESLint
 │   └── process/
 │       └── feature-branch-workflow.md
 │
-├── specs/
+├── specs/                               # Feature specifications
 │   ├── 001-advanced-todo-app/
 │   │   ├── checklists/
 │   │   │   ├── execution-ready.md
@@ -171,12 +166,10 @@ ESLint
 │   │   ├── research.md
 │   │   ├── spec.md
 │   │   └── tasks.md
-│   │
 │   ├── 002-overhaul-todo-ui/
 │   │   ├── checklists/
 │   │   │   └── requirements.md
 │   │   └── spec.md
-│   │
 │   └── 003-ui-ux-enhancements/
 │       ├── checklists/
 │       │   ├── execution-ready.md
@@ -191,7 +184,7 @@ ESLint
 │       ├── spec.md
 │       └── tasks.md
 │
-├── src/
+├── src/                                 # Application source code
 │   ├── animations/
 │   ├── app/
 │   ├── components/
@@ -202,10 +195,10 @@ ESLint
 │   ├── styles/
 │   └── main.jsx
 │
-├── tests/
+├── tests/                               # Test suites
 │   ├── contract/
 │   ├── integration/
-│   ├── unit/
+│   └── unit/
 │   └── setupTests.js
 │
 ├── .gitignore
@@ -215,10 +208,16 @@ ESLint
 ├── package.json
 ├── package-lock.json
 └── vitest.config.js
-🧪 Testing
-Contract Tests
-Integration Tests
-Unit Tests
-📄 License
+```
+
+## 🧪 Testing
+
+| Type | Location |
+|------|----------|
+| Contract Tests | `tests/contract/` |
+| Integration Tests | `tests/integration/` |
+| Unit Tests | `tests/unit/` |
+
+## 📄 License
 
 MIT License
