@@ -53,171 +53,39 @@ Vite
 Vitest + Testing Library
 ESLint
 
-
-📂 Full Project Structure
-.
-├── .github/
-│   ├── agents/                          # AI agent definitions
-│   │   ├── speckit.analyze.agent.md
-│   │   ├── speckit.checklist.agent.md
-│   │   ├── speckit.clarify.agent.md
-│   │   ├── speckit.constitution.agent.md
-│   │   ├── speckit.git.commit.agent.md
-│   │   ├── speckit.git.feature.agent.md
-│   │   ├── speckit.git.initialize.agent.md
-│   │   ├── speckit.git.remote.agent.md
-│   │   ├── speckit.git.validate.agent.md
-│   │   ├── speckit.implement.agent.md
-│   │   ├── speckit.plan.agent.md
-│   │   ├── speckit.specify.agent.md
-│   │   ├── speckit.tasks.agent.md
-│   │   └── speckit.taskstoissues.agent.md
-│   ├── prompts/                         # Prompt templates for each agent
-│   │   ├── speckit.analyze.prompt.md
-│   │   ├── speckit.checklist.prompt.md
-│   │   ├── speckit.clarify.prompt.md
-│   │   ├── speckit.constitution.prompt.md
-│   │   ├── speckit.git.commit.prompt.md
-│   │   ├── speckit.git.feature.prompt.md
-│   │   ├── speckit.git.initialize.prompt.md
-│   │   ├── speckit.git.remote.prompt.md
-│   │   ├── speckit.git.validate.prompt.md
-│   │   ├── speckit.implement.prompt.md
-│   │   ├── speckit.plan.prompt.md
-│   │   ├── speckit.specify.prompt.md
-│   │   ├── speckit.tasks.prompt.md
-│   │   └── speckit.taskstoissues.prompt.md
-│   ├── workflows/
-│   │   └── branch-policy.yml
+📦 project-root
+├── 📁 .github/
+│   ├── agents/          # AI agent definitions (specify, plan, implement...)
+│   ├── prompts/         # Prompt templates for each agent
+│   ├── workflows/       # Branch policy
 │   └── copilot-instructions.md
 │
-├── .specify/
+├── 📁 .specify/
 │   ├── extensions/
-│   │   ├── git/                         # Git extension
-│   │   │   ├── commands/
-│   │   │   │   ├── speckit.git.commit.md
-│   │   │   │   ├── speckit.git.feature.md
-│   │   │   │   ├── speckit.git.initialize.md
-│   │   │   │   ├── speckit.git.remote.md
-│   │   │   │   └── speckit.git.validate.md
-│   │   │   ├── scripts/
-│   │   │   │   ├── bash/
-│   │   │   │   │   ├── auto-commit.sh
-│   │   │   │   │   ├── create-new-feature.sh
-│   │   │   │   │   ├── git-common.sh
-│   │   │   │   │   └── initialize-repo.sh
-│   │   │   │   └── powershell/
-│   │   │   │       ├── auto-commit.ps1
-│   │   │   │       ├── create-new-feature.ps1
-│   │   │   │       ├── git-common.ps1
-│   │   │   │       └── initialize-repo.ps1
-│   │   │   ├── config-template.yml
-│   │   │   ├── extension.yml
-│   │   │   ├── git-config.yml
-│   │   │   └── README.md
-│   │   └── .registry/
-│   │       └── integrations/
-│   │           ├── copilot/
-│   │           │   └── scripts/
-│   │           │       ├── update-context.ps1
-│   │           │       └── update-context.sh
-│   │           ├── copilot.manifest.json
-│   │           └── speckit.manifest.json
+│   │   └── git/         # Git commands & scripts (Bash + PowerShell)
 │   ├── memory/
-│   │   └── constitution.md              # Project constitution / AI memory
-│   ├── scripts/
-│   │   └── powershell/
-│   │       ├── check-prerequisites.ps1
-│   │       ├── common.ps1
-│   │       ├── create-new-feature.ps1
-│   │       ├── setup-plan.ps1
-│   │       ├── update-agent-context.ps1
-│   │       └── validate-feature-branch.ps1
-│   ├── templates/                       # Document templates
-│   │   ├── agent-file-template.md
-│   │   ├── checklist-template.md
-│   │   ├── constitution-template.md
-│   │   ├── plan-template.md
-│   │   ├── spec-template.md
-│   │   └── tasks-template.md
-│   ├── extensions.yml
-│   ├── feature.json
-│   ├── init-options.json
-│   └── integration.json
+│   │   └── constitution.md   # Project constitution / AI memory
+│   ├── templates/       # Doc templates (spec, plan, tasks, checklist...)
+│   └── scripts/         # PowerShell setup scripts
 │
-├── .vscode/
-│   └── settings.json
-│
-├── docs/
-│   └── process/
-│       └── feature-branch-workflow.md
-│
-├── specs/                               # Feature specifications
+├── 📁 specs/
 │   ├── 001-advanced-todo-app/
-│   │   ├── checklists/
-│   │   │   ├── execution-ready.md
-│   │   │   └── requirements.md
-│   │   ├── contracts/
-│   │   │   ├── component-contracts.md
-│   │   │   └── state-store-contract.md
-│   │   ├── data-model.md
-│   │   ├── plan.md
-│   │   ├── quickstart.md
-│   │   ├── research.md
-│   │   ├── spec.md
-│   │   └── tasks.md
 │   ├── 002-overhaul-todo-ui/
-│   │   ├── checklists/
-│   │   │   └── requirements.md
-│   │   └── spec.md
 │   └── 003-ui-ux-enhancements/
-│       ├── checklists/
-│       │   ├── execution-ready.md
-│       │   └── requirements.md
+│       ├── spec.md / plan.md / tasks.md
 │       ├── contracts/
-│       │   ├── component-contracts.md
-│       │   └── motion-theme-contract.md
-│       ├── data-model.md
-│       ├── plan.md
-│       ├── quickstart.md
-│       ├── research.md
-│       ├── spec.md
-│       └── tasks.md
+│       └── checklists/
 │
-├── src/                                 # Application source code
-│   ├── animations/
-│   ├── app/
+├── 📁 src/
 │   ├── components/
+│   ├── state/
 │   ├── hooks/
 │   ├── models/
+│   ├── animations/
 │   ├── persistence/
-│   ├── state/
-│   ├── styles/
 │   └── main.jsx
 │
-├── tests/                               # Test suites
-│   ├── contract/
-│   ├── integration/
-│   └── unit/
-│   └── setupTests.js
-│
-├── .gitignore
-├── .npmignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── package-lock.json
-└── vitest.config.js
-```
-
-## 🧪 Testing
-
-| Type | Location |
-|------|----------|
-| Contract Tests | `tests/contract/` |
-| Integration Tests | `tests/integration/` |
-| Unit Tests | `tests/unit/` |
-
-## 📄 License
-
-MIT License
+└── 📁 tests/
+    ├── unit/
+    ├── integration/
+    └── contract/
