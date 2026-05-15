@@ -52,7 +52,7 @@ Framer Motion
 Vite
 Vitest + Testing Library
 ESLint
-
+```
 📦 project-root
 ├── 📁 .github/
 │   ├── agents/          # AI agent definitions (specify, plan, implement...)
@@ -89,3 +89,4 @@ ESLint
     ├── unit/
     ├── integration/
     └── contract/
+```
